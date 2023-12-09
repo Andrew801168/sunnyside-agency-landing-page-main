@@ -79,6 +79,11 @@ nav .links li a {
 
 /* Side menu */
 
+#burger-icon:hover,
+#burger-icon.active {
+  opacity: .7;
+}
+
 .side-menu {
   top: 102px;
   width: 80vw;

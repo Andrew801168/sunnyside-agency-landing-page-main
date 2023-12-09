@@ -36,7 +36,7 @@
         <img src="images/logo.svg" alt="" />
 
         <img
-          class="md:hidden cursor-pointer"
+          class="md:hidden cursor-pointer duration-300"
           id="burger-icon"
           src="images/icon-hamburger.svg"
           alt="hamburger"
@@ -328,6 +328,7 @@
 
       // Main burger icon click event
       burgerIcon.onclick = () => {
+        burgerIcon.classList.toggle("active");
         toggleSideMenu();
       };
     </script>
