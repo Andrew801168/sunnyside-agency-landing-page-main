@@ -32,11 +32,11 @@
   <body>
     <!-- Header section -->
     <header>
-      <nav class="px-8 py-7 flex justify-between items-center">
+      <nav class="px-8 py-7 flex justify-between items-center relative">
         <img src="images/logo.svg" alt="" />
 
         <img
-          class="md:hidden cursor-pointer max-md:block"
+          class="md:hidden cursor-pointer"
           id="burger-icon"
           src="images/icon-hamburger.svg"
           alt="hamburger"
@@ -47,6 +47,13 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Projects</a></li>
           <li class="active"><a href="#">Contact</a></li>
+        </ul>
+
+        <ul class="side-menu absolute hidden">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
 
@@ -72,15 +79,25 @@
           <a href="#" class="font-bold uppercase text-sm block">Learn more</a>
         </div>
         <img
-          class="lg:w-1/2 max-lg:w-full max-lg:h-1/2 object-cover"
+          class="w-1/2 max-lg:hidden"
           src="images/desktop/image-transform.jpg"
+          alt=""
+        />
+        <img
+          class="w-full lg:hidden"
+          src="images/mobile/image-transform.jpg"
           alt=""
         />
       </div>
       <div class="row two w-full lg:flex">
         <img
-          class="lg:w-1/2 max-lg:w-full max-lg:h-1/2 object-cover"
+          class="w-1/2 max-lg:hidden"
           src="images/desktop/image-stand-out.jpg"
+          alt=""
+        />
+        <img
+          class="w-full lg:hidden"
+          src="images/mobile/image-stand-out.jpg"
           alt=""
         />
         <div
@@ -103,10 +120,12 @@
             alt=""
           />
           <div class="info flex flex-col text-center absolute">
-            <h1 class="text-2xl block mb-8 max-sm:text-xl max-sm:mb-4">
+            <h1 class="text-2xl mb-8 max-sm:text-xl max-sm:mb-4 w-full">
               Graphic design
             </h1>
-            <p class="text-sm font-bold leading-normal mb-2 max-sm:text-xs">
+            <p
+              class="text-sm font-bold leading-normal mb-2 max-sm:text-xs max-[375px]:w-screen max-[375px]:px-4"
+            >
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
@@ -120,10 +139,12 @@
             alt=""
           />
           <div class="info flex flex-col text-center absolute">
-            <h1 class="text-2xl block mb-8 max-sm:text-xl max-sm:mb-4">
+            <h1 class="text-2xl mb-8 max-sm:text-xl max-sm:mb-4 w-full">
               Photography
             </h1>
-            <p class="text-sm font-bold leading-normal mb-2 max-sm:text-xs">
+            <p
+              class="text-sm font-bold leading-normal mb-2 max-sm:text-xs max-[375px]:w-screen max-[375px]:px-4"
+            >
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
@@ -134,9 +155,11 @@
 
     <!-- Testimonials Section -->
 
-    <section class="testimonials py-28 px-16 w-full">
+    <section
+      class="testimonials py-28 max-sm:py-16 sm:px-16 max-sm:px-8 w-full"
+    >
       <h1
-        class="main-heading text-xl w-full block text-center uppercase max-sm:text-base"
+        class="main-heading text-xl w-full block text-center uppercase max-sm:text-base max-[375px]:text-sm"
       >
         Client testimonials
       </h1>
@@ -154,7 +177,7 @@
             We put our trust in Sunnyside and they delivered, making sure our
             needs were met and deadlines were always hit.
           </p>
-          <div class="client-info mt-20">
+          <div class="client-info mt-20 max-sm:mt-10">
             <h1 class="client-name mb-2">Emily R.</h1>
             <p class="client-job text-sm">Marketing Director</p>
           </div>
@@ -171,7 +194,7 @@
             Sunnyside’s enthusiasm coupled with their keen interest in our
             brand’s success made it a satisfying and enjoyable experience.
           </p>
-          <div class="client-info mt-20">
+          <div class="client-info mt-20 max-sm:mt-10">
             <h1 class="client-name mb-2">Thomas S.</h1>
             <p class="client-job text-sm">Chief Operating Officer</p>
           </div>
@@ -188,7 +211,7 @@
             Incredible end result! Our sales increased over 400% when we worked
             with Sunnyside. Highly recommended!
           </p>
-          <div class="client-info mt-20">
+          <div class="client-info mt-20 max-sm:mt-10">
             <h1 class="client-name mb-2">Jennie F.</h1>
             <p class="client-job text-sm">Business Owner</p>
           </div>
@@ -197,7 +220,7 @@
     </section>
 
     <footer class="w-full">
-      <div class="gallary w-full grid-cols-2 grid md:grid-cols-4">
+      <div class="gallary-desktop w-full grid-cols-4 grid max-md:hidden">
         <img
           class="w-full"
           src="images/desktop/image-gallery-milkbottles.jpg"
@@ -219,6 +242,29 @@
           alt=""
         />
       </div>
+
+      <div class="gallary-mobile w-full grid-cols-2 grid md:hidden">
+        <img
+          class="w-full"
+          src="images/mobile/image-gallery-milkbottles.jpg"
+          alt=""
+        />
+        <img
+          class="flex-1 w-full"
+          src="images/mobile/image-gallery-orange.jpg"
+          alt=""
+        />
+        <img
+          class="flex-1 w-full"
+          src="images/mobile/image-gallery-cone.jpg"
+          alt=""
+        />
+        <img
+          class="flex-1 w-full"
+          src="images/mobile/image-gallery-sugar-cubes.jpg"
+          alt=""
+        />
+      </div>
       <div class="info w-full h-full text-center p-14">
         <h1 class="footer-title text-3xl font-extrabold">sunnyside</h1>
 
@@ -234,16 +280,56 @@
           <li><i class="fa-brands fa-twitter fa-xl"></i></li>
           <li><i class="fa-brands fa-pinterest fa-xl"></i></li>
         </ul>
-        <div class="attribution pt-14">
+        <div class="attribution pt-14 max-[375px]:text-xs">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="https://github.com/Andrew801168" target="_blank">Zaro</a>.
+          >. Coded by
+          <a href="https://github.com/Andrew801168" target="_blank">Zaro</a>.
         </div>
       </div>
     </footer>
     <!--  -->
 
-    <script src="js/main.js"></script>
+    <script>
+      // Select elements
+      const burgerIcon = document.querySelector("#burger-icon");
+      const sideMenu = document.querySelector(".side-menu");
+
+      // Hide Side Menu function
+      const hideSideMenu = () => {
+        sideMenu.classList.add("hidden");
+      };
+
+      // if the side menu was open and for some case the screen width was changed the side menu will be hidden if the burger icon was hidden
+      window.addEventListener("resize", () => {
+        if (document.body.offsetWidth > 768) {
+          if (!sideMenu.classList.contains("hidden")) {
+            hideSideMenu();
+          }
+        }
+      });
+
+      // if the user clicked in any part of the page and it wasn't the burger icon the side menu will be hidden
+      document.body.addEventListener("click", (e) => {
+        if (e.target !== burgerIcon) {
+          hideSideMenu();
+        }
+      });
+
+      // Side menu show and hide toggle
+      const toggleSideMenu = () => {
+        if (sideMenu.classList.contains("hidden")) {
+          sideMenu.classList.remove("hidden");
+        } else {
+          hideSideMenu();
+        }
+      };
+
+      // Main burger icon click event
+      burgerIcon.onclick = () => {
+        toggleSideMenu();
+      };
+    </script>
   </body>
 </html>
